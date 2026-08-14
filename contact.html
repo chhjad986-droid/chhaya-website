@@ -17,12 +17,14 @@
         </nav>
         <div class="card">
             <h1>contact Me</h1>
-            <p>You Can Contact Me Here</p>
-            <form onsubmit="sendMessage(event)">
-                <input type="text" placeholder="your NAME"><br><br>
-                <input type="email" placeholder="your email"><br><br>
-                <textarea placeholder="your Message"></textarea><br><br>
-                <button type="submit">send Message</button>
+            <p>You Can Contact Me For Learning And Web Projects</p>
+            <p>Thank You For Visiting My Website</p>
+            <form action="https://formsubmit.co/your-email" method="post">
+                <input type="text" name="name" placeholder="your Name" required><br><br>
+                 <input type="email" name="email" placeholder="your email" required><br><br>
+                 <textarea name="Message" placeholder="your Message" required></textarea><br><br>
+                 <input type="hidden" name="_subject" value="New Message From My Website">
+                 <button type="submit">send Message</button>
             </form>
         </div>
     </body>
