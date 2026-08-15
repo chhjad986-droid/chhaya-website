@@ -1,63 +1,154 @@
-<html>
-    <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Chhaya Website</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <section class="Home" id="Home">
-            <div class="Home-content">
-                <h1>Welcome To My Website</h1>
-                <p>Hello! I'm Chhaya. Welcome To My Personal Website.
-                    Explore My Work, Skills, and Projects.
-                </p>
-                <a href="#about" class="home-btn">Explore More</a>
-            </div>
-        </section>
-        <section class="About" id="About">
-           <h2>About Me </h2>
-           <p>
-            Hello! I'm Chhaya. I Am Learning Web Development 
-            And Building And Projects.
-        </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chhaya Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+   <!-- Home -->
+<section class="Home" id="Home">
+    <div class="Home-content">
+
+        <p class="intro">Hello, I'm ♡</p>
+
+        <h1>Chhaya</h1>
+
+        <h2>Web Developer | Designer | Learner</h2>
+
         <p>
-            I Enjoy Learning New Computer Skills, Creating Websites
-            And Turning Ideas Into Useful Projects.
+            I build beautiful and responsive websites.
+            <br>
+            Let's create something amazing together!
         </p>
-        </section>
-        <section class="Skills" id="Skills">
-            <h2>My Skills</h2>
-            <div class="Skills-card">
-                <h3>Computer Skills</h3>
-                <p>Computer Basics, Ms Office And Typing.</p>
+
+        <div class="home-buttons">
+    <a href="#About" class="home-btn">Explore More</a>
+    <a href="contact.html" class="contact-btn">Contact Me</a>
+</div>
+
+ </div>
+</section>
+
+   <!-- About -->
+<section class="About" id="About">
+
+    <div class="about-image">
+        <img src="myphoto.jpg" alt="Chhaya">
+    </div>
+
+    <div class="about-content">
+        <h2>About Me</h2>
+
+        <p>
+            I'm Chhaya. I'm learning Web Development and
+            building creative projects.
+        </p>
+
+        <p>
+            I love learning new things, coding, designing
+            and turning ideas into useful projects.
+        </p>
+
+        <div class="about-info">
+
+            <div class="info-card">
+                <span>👤</span>
+                <strong>Name</strong>
+                <p>Chhaya</p>
             </div>
-            <div class="Skills-card">
-                <h3>Web Development</h3>
-                <p>HTML, CSS And Basic JAVASCRIPT.</p>
+
+            <div class="info-card">
+                <span>🎓</span>
+                <strong>Study</strong>
+                <p>ITI + BA</p>
             </div>
-            <div class="Skills-card">
-                <h3>Video & Design</h3>
-                <p>Creative Editing And Graphic Design.</p>
+
+            <div class="info-card">
+                <span>💻</span>
+                <strong>Skills</strong>
+                <p>Web Development</p>
             </div>
-        </section>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">contact</a>
-        </nav>
-        <div class="card">
-            <h2>WELCOME</h2>
-            <h1>Welcome To My Website</h1>
-             <p class="subtitle">Learning & Creating & Growing</p>
-             <p>Hello! My Name Is Chhaya</p>
-            <button onclick="showmessage( )">Click Me</button>
-            <img src="myphoto.jpg" alt="myphoto" width="250">
+
         </div>
-        <script>
-            function showmessage( ) {
-                alert("Hello! Welcome To My Website");
-            };
-        </script>
-    </body>
+    </div>
+
+</section>
+
+   <!-- Skills -->
+<section class="Skills" id="Skills">
+
+    <h2>My Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <div class="skill-icon">HTML</div>
+            <h3>HTML</h3>
+            <p>90%</p>
+            <div class="progress">
+                <div class="progress-bar html"></div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">CSS</div>
+            <h3>CSS</h3>
+            <p>85%</p>
+            <div class="progress">
+                <div class="progress-bar css"></div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">JS</div>
+            <h3>JavaScript</h3>
+            <p>70%</p>
+            <div class="progress">
+                <div class="progress-bar js"></div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">&lt;/&gt;</div>
+            <h3>C / C++</h3>
+            <p>75%</p>
+            <div class="progress">
+                <div class="progress-bar cpp"></div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">💻</div>
+            <h3>MS Office</h3>
+            <p>80%</p>
+            <div class="progress">
+                <div class="progress-bar office"></div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">🎨</div>
+            <h3>Canva / Design</h3>
+            <p>85%</p>
+            <div class="progress">
+                <div class="progress-bar canva"></div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
 </html>

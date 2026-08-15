@@ -1,31 +1,46 @@
-<html>
-    <head>
-         <link rel="stylesheet" href="style.css">
-        <title>contact</title>
-    </head>
-    <script>
-        function sendMessage(event) {
-            event.preventDefault( );
-            alert("Message Sent Successfully!");
-        }
-    </script>
-    <body>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">contact</a>
-        </nav>
-        <div class="card">
-            <h1>contact Me</h1>
-            <p>You Can Contact Me For Learning And Web Projects</p>
-            <p>Thank You For Visiting My Website</p>
-            <form action="https://formsubmit.co/your-email" method="post">
-                <input type="text" name="name" placeholder="your Name" required><br><br>
-                 <input type="email" name="email" placeholder="your email" required><br><br>
-                 <textarea name="Message" placeholder="your Message" required></textarea><br><br>
-                 <input type="hidden" name="_subject" value="New Message From My Website">
-                 <button type="submit">send Message</button>
-            </form>
-        </div>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Chhaya Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Contact -->
+    <div class="card contact-card">
+
+        <h1>Contact Me</h1>
+
+        <p>
+            You Can Contact Me For Learning And Web Projects.
+        </p>
+
+        <p>
+            Thank You For Visiting My Website 💜
+        </p>
+
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+
+            <input type="email" name="email" placeholder="Your Email" required>
+
+            <textarea name="message" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+    </div>
+
+</body>
 </html>

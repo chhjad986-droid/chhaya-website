@@ -195,3 +195,242 @@ nav a:hover {
     transform: translateY(0);
   }
 }
+/* Contact Form */
+.contact-card {
+  text-align: center;
+  max-width: 700px;
+}
+
+.contact-card h1 {
+  color: #6a5acd;
+  margin-bottom: 15px;
+}
+
+.contact-card form {
+  margin-top: 25px;
+}
+
+.contact-card input,
+.contact-card textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.contact-card textarea {
+  height: 140px;
+  resize: vertical;
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus {
+  outline: none;
+  border-color: #6a5acd;
+  box-shadow: 0 0 5px rgba(106, 90, 205, 0.3);
+}
+
+.contact-card button {
+  margin-top: 10px;
+  padding: 13px 30px;
+}
+/* Contact Me Button */
+.contact-btn {
+    display: inline-block;
+    padding: 13px 25px;
+    margin-left: 10px;
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    background: transparent;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-btn:hover {
+    background: white;
+    color: #6f5acd;
+}
+/* About Section */
+.About {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    gap: 45px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    color: #6a5acd;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    margin-bottom: 12px;
+}
+
+.about-info {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    padding: 15px;
+    min-width: 130px;
+    background: #f7f3ff;
+    border-radius: 12px;
+    border: 1px solid #eee;
+}
+
+.info-card span {
+    font-size: 22px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.info-card strong {
+    color: #6a5acd;
+}
+
+.info-card p {
+    margin: 3px 0 0;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .About {
+        margin: 25px 12px;
+        padding: 25px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .about-info {
+        justify-content: center;
+    }
+}
+/* Skills Section */
+
+.Skills {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px 25px;
+    background: #f8f7ff;
+    border-radius: 20px;
+}
+
+.Skills h2 {
+    text-align: center;
+    color: #222;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+    padding: 25px 18px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.skill-icon {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #6a5acd;
+}
+
+.skill-card h3 {
+    margin-bottom: 5px;
+}
+
+.skill-card p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.progress {
+    height: 8px;
+    background: #e5e5e5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.html {
+    width: 90%;
+    background: #f4511e;
+}
+
+.css {
+    width: 85%;
+    background: #2196f3;
+}
+
+.js {
+    width: 70%;
+    background: #fbc02d;
+}
+
+.cpp {
+    width: 75%;
+    background: #8e44ad;
+}
+
+.office {
+    width: 80%;
+    background: #00a6a6;
+}
+
+.canva {
+    width: 85%;
+    background: #e83e8c;
+}
+
+@media (max-width: 800px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+}
