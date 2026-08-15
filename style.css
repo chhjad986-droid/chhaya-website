@@ -953,3 +953,213 @@ nav a:hover {
         gap: 12px;
     }
 }
+.theme-btn {
+    background: transparent;
+    border: 1px solid #777;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+body.dark-mode {
+    background: #111;
+    color: white;
+}
+
+body.dark-mode .About,
+body.dark-mode .Skills,
+body.dark-mode .Projects,
+body.dark-mode .Gallery {
+    background: #1c1c1c;
+    color: white;
+}
+
+body.dark-mode .skill-card,
+body.dark-mode .project-card,
+body.dark-mode .info-card {
+    background: #252525;
+    color: white;
+}
+
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #c084fc;
+}
+
+body.dark-mode .Contact {
+    background: #201b2b;
+}
+/* Footer */
+.footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 40px;
+}
+
+.footer h2 {
+    color: #c084fc;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    margin: 8px 0;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: #ec4899;
+}
+
+/* Social Buttons */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.social-links a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) scale(1.08);
+}
+
+.instagram {
+    background: #e1306c;
+}
+
+.facebook {
+    background: #1877f2;
+}
+
+.github {
+    background: #333;
+}
+
+.youtube {
+    background: #ff0000;
+}
+
+.copyright {
+    font-size: 14px;
+    opacity: 0.8;
+}
+/* Extra Professional Project Cards */
+
+.project-card {
+    position: relative;
+    transition: 0.4s ease;
+}
+
+.project-card::before {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 0;
+    background: linear-gradient(90deg, #7c3aed, #ec4899);
+    transition: 0.4s ease;
+}
+
+.project-card:hover::before {
+    width: 100%;
+}
+
+.project-card h3 {
+    font-size: 21px;
+}
+
+.project-card p {
+    color: #666;
+}
+
+.project-image {
+    font-size: 65px;
+}
+
+.project-btn {
+    padding: 11px 24px;
+}
+/* Gallery Image Viewer */
+
+.image-viewer {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-viewer img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+#close-viewer {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Fields ke beech space */
+  max-width: 500px; /* Form ki width set karne ke liye */
+  margin: 0 auto; /* Form ko center karne ke liye */
+  padding: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box; /* Padding se layout kharab hone se bachata hai */
+}
+
+.contact-form button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}

@@ -10,13 +10,15 @@
 <body>
 
     <!-- Navigation -->
-    <nav>
+   <nav>
     <a href="#Home">Home</a>
     <a href="#About">About</a>
     <a href="#Skills">Skills</a>
     <a href="#Projects">Projects</a>
     <a href="#Gallery">Gallery</a>
     <a href="#Contact">Contact</a>
+
+    <button id="theme-toggle" class="theme-btn">🌙</button>
 </nav>
 
    <!-- Home -->
@@ -242,19 +244,15 @@
         <p>📍 Shivpuri, Madhya Pradesh, India</p>
     </div>
 
-    <form class="contact-form">
-
-        <input type="text" placeholder="Your Name" required>
-
-        <input type="email" placeholder="Your Email" required>
-
-        <input type="text" placeholder="Subject" required>
-
-        <textarea placeholder="Message" rows="5" required></textarea>
-
-        <button type="submit">Send Message ➤</button>
-
-    </form>
+ <form class="contact-form"
+      action="https://formsubmit.co/annujadon797@gmail.com"
+      method="POST">>
+  <input type="text" placeholder="Name" required>
+  <input type="email" placeholder="Email" required>
+  <input type="text" placeholder="Subject" required>
+  <textarea placeholder="Message" rows="5" required></textarea>
+ <button type="submit">Send Message ➤</button>
+</form>
 
 </section>
 <!-- Footer -->
@@ -276,7 +274,48 @@
     <p class="copyright">
         © 2026 Chhaya Website. All Rights Reserved.
     </p>
-
+<div class="social-links">
+    <a href="#" class="instagram">📷</a>
+    <a href="#" class="facebook">f</a>
+    <a href="#" class="github">●</a>
+    <a href="#" class="youtube">▶</a>
+</div>
 </footer>
+<script>
+const themeButton = document.getElementById("theme-toggle");
+
+themeButton.addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        themeButton.textContent = "☀️";
+    } else {
+        themeButton.textContent = "🌙";
+    }
+});
+</script>
+<!-- Image Viewer -->
+<div id="image-viewer" class="image-viewer">
+    <span id="close-viewer">&times;</span>
+    <img id="big-image" src="" alt="Large Image">
+</div>
+
+<script>
+const galleryImages = document.querySelectorAll(".gallery-card img");
+const viewer = document.getElementById("image-viewer");
+const bigImage = document.getElementById("big-image");
+const closeViewer = document.getElementById("close-viewer");
+
+galleryImages.forEach(function(image) {
+    image.addEventListener("click", function() {
+        viewer.style.display = "flex";
+        bigImage.src = image.src;
+    });
+});
+
+closeViewer.addEventListener("click", function() {
+    viewer.style.display = "none";
+});
+</script>
 </body>
 </html>
