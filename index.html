@@ -47,7 +47,7 @@
 </section>
 
    <!-- About -->
-<section class="About" id="About">
+<section class="About reveal" id="About">
 
     <div class="about-image">
         <img src="myphoto.jpg" alt="Chhaya">
@@ -92,7 +92,7 @@
 </section>
 
    <!-- Skills -->
-<section class="Skills" id="Skills">
+<section class="Skills reveal" id="Skills">
 
     <h2>My Skills</h2>
 
@@ -156,7 +156,7 @@
 
 </section>
 <!-- Projects -->
-<section class="Projects" id="Projects">
+<section class="Projects reveal" id="Projects">
 
     <h2>My Projects</h2>
 
@@ -205,7 +205,7 @@
 
 </section>
 <!-- Gallery -->
-<section class="Gallery" id="Gallery">
+<section class="Gallery reveal" id="Gallery">
 
     <h2>Gallery</h2>
 
@@ -239,7 +239,7 @@
 
 </section>
 <!-- Contact -->
-<section class="Contact" id="Contact">
+<section class="Contact reveal" id="Contact">
 
     <div class="contact-info">
         <h2>Contact Me</h2>
@@ -410,6 +410,24 @@ const skillObserver = new IntersectionObserver(function(entries) {
 
 skillBars.forEach(function(bar) {
     skillObserver.observe(bar);
+});
+</script>
+<script>
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+revealElements.forEach(function(element) {
+    revealObserver.observe(element);
 });
 </script>
 </body>
