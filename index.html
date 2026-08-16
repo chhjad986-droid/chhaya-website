@@ -14,7 +14,7 @@
     <div class="logo">Chhaya</div>
 
     <button class="menu-btn" onclick="toggleMenu()">☰</button>
-
+     BBC<button id="theme-toggle" class="theme-toggle">🌙</button>
     <div class="nav-links" id="navLinks">
         <a href="#Home">Home</a>
         <a href="#About">About</a>
@@ -32,9 +32,7 @@
         <p class="intro">Hello, I'm ♡</p>
 
         <h1>Chhaya</h1>
-
-        <h2>Web Developer | Designer | Learner</h2>
-
+          <h2><span id="typing-text"></span></h2>
         <p>
             I build beautiful and responsive websites.
             <br>
@@ -333,6 +331,86 @@ closeViewer.addEventListener("click", function() {
 function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("show");
 }
+</script>
+<button id="topBtn" title="Go to top">↑</button>
+
+<script>
+const topBtn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+});
+
+topBtn.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
+<script>
+const text = [
+    "Web Developer",
+    "Designer",
+    "Learner"
+];
+
+let textIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+function typingEffect() {
+    const typingText = document.getElementById("typing-text");
+    const currentText = text[textIndex];
+
+    if (!deleting) {
+        typingText.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex === currentText.length) {
+            deleting = true;
+            setTimeout(typingEffect, 1200);
+            return;
+        }
+    } else {
+        typingText.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+
+        if (charIndex === 0) {
+            deleting = false;
+            textIndex = (textIndex + 1) % text.length;
+        }
+    }
+
+    setTimeout(typingEffect, deleting ? 70 : 120);
+}
+
+typingEffect();
+</script>
+<script>
+const skillBars = document.querySelectorAll(".progress-bar");
+
+const skillObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            const bar = entry.target;
+            bar.style.width = getComputedStyle(bar)
+                .getPropertyValue("--skill-width");
+
+            skillObserver.unobserve(bar);
+        }
+    });
+}, {
+    threshold: 0.3
+});
+
+skillBars.forEach(function(bar) {
+    skillObserver.observe(bar);
+});
 </script>
 </body>
 </html>
