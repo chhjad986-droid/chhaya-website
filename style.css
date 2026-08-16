@@ -1503,3 +1503,33 @@ body.dark-mode .info-card {
         gap: 12px;
     }
 }
+/* Mobile Navbar Fix */
+@media (max-width: 600px) {
+
+    nav {
+        padding: 12px 15px;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu-btn {
+        display: block;
+        font-size: 24px;
+        margin-left: auto;
+    }
+
+    .theme-toggle {
+        font-size: 20px;
+        margin-left: 8px;
+    }
+
+    .nav-links {
+        top: 100%;
+        z-index: 1000;
+    }
+}
