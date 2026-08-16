@@ -10,15 +10,19 @@
 <body>
 
     <!-- Navigation -->
-   <nav>
-    <a href="#Home">Home</a>
-    <a href="#About">About</a>
-    <a href="#Skills">Skills</a>
-    <a href="#Projects">Projects</a>
-    <a href="#Gallery">Gallery</a>
-    <a href="#Contact">Contact</a>
+  <nav class="navbar">
+    <div class="logo">Chhaya</div>
 
-    <button id="theme-toggle" class="theme-btn">🌙</button>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <div class="nav-links" id="navLinks">
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Skills">Skills</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Gallery">Gallery</a>
+        <a href="#Contact">Contact</a>
+    </div>
 </nav>
 
    <!-- Home -->
@@ -322,6 +326,11 @@ galleryImages.forEach(function(image) {
 closeViewer.addEventListener("click", function() {
     viewer.style.display = "none";
 });
+</script>
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+}
 </script>
 </body>
 </html>
