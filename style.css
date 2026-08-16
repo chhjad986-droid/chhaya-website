@@ -1284,7 +1284,7 @@ body.dark-mode .Contact {
     }
 
     .nav-links {
-        display: none;
+        display: flex;
         position: absolute;
         top: 70px;
         left: 0;
@@ -1292,10 +1292,17 @@ body.dark-mode .Contact {
         background: #222;
         flex-direction: column;
         padding: 15px 0;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-15px);
+        transition: 0.3s ease;
     }
 
     .nav-links.show {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
     .nav-links a {
