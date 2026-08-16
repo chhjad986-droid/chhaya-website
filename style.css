@@ -1311,3 +1311,19 @@ body.dark-mode .Contact {
         text-align: center;
     }
 }
+.resume-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    border-radius: 25px;
+    background: white;
+    color: #6a5acd;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.resume-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
